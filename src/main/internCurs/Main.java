@@ -13,7 +13,6 @@ public class Main {
 
         Car carBean = context.getBean(Car.class);
 
-        System.out.println();
         System.out.println(carBean.getEngineer().getName());
 
     }
