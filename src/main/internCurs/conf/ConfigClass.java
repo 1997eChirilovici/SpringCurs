@@ -10,9 +10,7 @@ public class ConfigClass {
 
     @Bean
     Car getCar(){
-        Car car = new Car();
-        car.setEngineer(getEngineer());
-        return car;
+        return new Car(getEngineer());
     }
 
     @Bean
