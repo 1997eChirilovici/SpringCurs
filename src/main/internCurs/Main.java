@@ -1,7 +1,7 @@
 package main.internCurs;
 
 import main.internCurs.conf.ConfigClass;
-import main.internCurs.model.Car;
+import main.internCurs.model.Broker;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -11,9 +11,9 @@ public class Main {
         ApplicationContext context =
                 new AnnotationConfigApplicationContext(ConfigClass.class);
 
-        Car carBean = context.getBean(Car.class);
+        Broker myBroker = context.getBean(Broker.class);
 
-        System.out.println(carBean.getEngineer().getName());
+        System.out.println(myBroker.getEngineerAndBrokerResponsible());
 
     }
 
