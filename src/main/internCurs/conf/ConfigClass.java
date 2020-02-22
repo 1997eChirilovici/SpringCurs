@@ -11,20 +11,6 @@ import org.springframework.context.annotation.Configuration;
 public class ConfigClass {
 
     @Bean
-    @Qualifier("Audi")
-    public Car getAudi() {
-        Engineer engineer = new Engineer();
-        engineer.setName("Iwan");
-        return new Audi(engineer);
-    }
-
-    @Bean
-    @Qualifier("BMW")
-    public Car getBMW() {
-        return new BMW(getEngineer());
-    }
-
-    @Bean
     public Engineer getEngineer() {
         Engineer engineer = new Engineer();
         engineer.setName("Ion");
