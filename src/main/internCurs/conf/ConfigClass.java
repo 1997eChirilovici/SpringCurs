@@ -1,8 +1,6 @@
 package main.internCurs.conf;
 
-import main.internCurs.model.Broker;
-import main.internCurs.model.Car;
-import main.internCurs.model.Engineer;
+import main.internCurs.model.*;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -13,23 +11,23 @@ import org.springframework.context.annotation.Configuration;
 public class ConfigClass {
 
     @Bean
-    @Qualifier("bmw")
-    public Car getCar() {
+    @Qualifier("Audi")
+    public Car getAudi() {
         Engineer engineer = new Engineer();
-        engineer.setName("Ion");
-        return new Car(engineer);
+        engineer.setName("Iwan");
+        return new Audi(engineer);
     }
 
     @Bean
-    @Qualifier("audi")
-    public Car getCar2() {
-        return new Car(getEngineer());
+    @Qualifier("BMW")
+    public Car getBMW() {
+        return new BMW(getEngineer());
     }
 
     @Bean
     public Engineer getEngineer() {
         Engineer engineer = new Engineer();
-        engineer.setName("Iwan");
+        engineer.setName("Ion");
         return engineer;
     }
 
